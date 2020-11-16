@@ -1,0 +1,28 @@
+@import "../../utilities/utils.scss";
+
+#about {
+  height: 100vh;
+
+  .about-text {
+    @include mq("md") {
+      margin-bottom: 1rem;
+    }
+  }
+
+  img {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid $black;
+    margin: 0 auto;
+
+    @include mq("md") {
+      width: 480px;
+    }
+  }
+
+  p {
+    @include mq("md") {
+      font-size: 24px;
+    }
+  }
+}

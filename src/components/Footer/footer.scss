@@ -1,0 +1,20 @@
+@import "../../utilities/utils.scss";
+
+footer {
+  text-align: center;
+  color: $white;
+  background-image: url(../../assets/img/ocean.jpg);
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 30px;
+
+  @include mq("md") {
+    height: 40px;
+  }
+
+  p {
+    margin: 0 auto;
+    padding-top: 3px;
+  }
+}

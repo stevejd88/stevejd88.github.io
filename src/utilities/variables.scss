@@ -1,0 +1,22 @@
+@import "../assets/fonts/webfontkit-billo/stylesheet.scss";
+
+//COLORS
+$black: #000000;
+$black-grey: #131313;
+$white: #f4f4f4;
+$orange: #f0a500;
+$orange-dark: #cf7500;
+$grey: #afafaf;
+$light-grey: #b1b1a6;
+$red: #992d2d;
+$gold: #ffd700;
+
+$font-stack-primary: "billo_dreamregular";
+
+//BREAKPOINTS MAP
+$breakpoints: (
+  "sm": 320px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1200px
+);

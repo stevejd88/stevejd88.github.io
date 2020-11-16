@@ -1,0 +1,59 @@
+@import "../../utilities/utils.scss";
+
+.navbar {
+  background-image: url("../../assets/img/ocean.jpg");
+  border-bottom: 3px ridge $white;
+
+  a {
+    font-family: "Ranchers", Georgia, "Times New Roman", Times, serif;
+  }
+
+  .navbar-brand {
+    margin: 0;
+    @include mq("lg") {
+      padding: 5px;
+      margin-right: 1rem;
+    }
+
+    a {
+      background-color: $orange-dark;
+      border: 1px solid $black;
+      padding: 0.1rem;
+      color: $black;
+
+      @include mq("lg") {
+        padding: 5px;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    background-color: $orange-dark;
+  }
+
+  .navbar-nav {
+    margin-top: 0.25rem;
+    .nav-link {
+      width: 35%;
+      margin-bottom: 0.15rem;
+      color: $white;
+      padding-left: 0.15rem;
+      border-radius: 0.3rem;
+    }
+
+    .nav-link.active {
+      color: $orange;
+    }
+
+    .nav-link {
+      &:hover {
+        color: $gold;
+      }
+
+      @include mq("lg") {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+@import "../../utilities/utils.scss";
+
+#landingPage {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  // padding-bottom: 4rem;
+
+  @include mq("lg") {
+    margin-top: 6.5rem;
+  }
+
+  .heading-wrapper {
+    margin-bottom: 1.5rem;
+    @include mq("md") {
+      margin-bottom: 3rem;
+    }
+    @include mq("lg") {
+      margin-bottom: 2rem;
+    }
+  }
+
+  h1 {
+    color: $black;
+    font-weight: 800;
+    font-size: 38px;
+    margin-bottom: 0;
+    @include mq("md") {
+      font-size: 66px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .tag-p {
+    font-weight: 400;
+    color: $white;
+    font-size: 24px;
+    width: 206px;
+    margin: 0 auto;
+    @include mq("md") {
+      margin-bottom: 0;
+      font-size: 38px;
+      width: 331px;
+    }
+  }
+
+  .land-img-cont {
+    margin-bottom: 1.5rem;
+    @include mq("md") {
+      border-top: 1px solid $black;
+      border-bottom: 1px solid $black;
+      margin: 0 auto;
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+
+    @include mq("lg") {
+      margin-bottom: 3rem;
+    }
+  }
+
+  img {
+    width: 130px;
+    border: 2px inset $black;
+    border-radius: 100px;
+    display: block;
+    margin: 0 auto;
+
+    @include mq("md") {
+      width: 300px;
+    }
+  }
+
+  a {
+    font-size: 40px;
+    text-decoration: none;
+  }
+
+  .portfolio-link {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0.5px solid $black;
+    border-radius: 30px;
+    margin: 0 auto 0.5rem auto;
+    width: 190px;
+
+    @include mq("md") {
+      width: 330px;
+    }
+  }
+
+  .landing-port {
+    color: $white;
+    font-size: 24px;
+    margin: 0 auto;
+    text-transform: uppercase;
+
+    @include mq("md") {
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 38px;
+    }
+
+    &:hover {
+      background-color: $black;
+      color: $gold;
+      border: 1px solid $white;
+      border-radius: 30px;
+    }
+  }
+
+  .landing-contacts {
+    @include flex-me($dir: row, $just: center);
+    max-width: 70%;
+    margin: 0 auto;
+
+    .contact-container {
+      background-color: $black;
+      border-radius: 50px;
+      margin: 0 7px;
+      padding: 8px;
+      @include mq("md") {
+        padding: 10px;
+      }
+    }
+
+    a {
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+    }
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      width: 20px;
+      height: 20px;
+
+      @include mq("md") {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  a:hover > svg * {
+    fill: $gold;
+  }
+
+  .tag-p.animate__animated.animate__bounceInRight {
+    animation-delay: 0.3s;
+  }
+
+  .animate__animated.animate__fadeIn {
+    animation-delay: 0.8s;
+  }
+}

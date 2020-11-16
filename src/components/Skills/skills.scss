@@ -1,0 +1,59 @@
+@import "../../utilities/utils.scss";
+
+#skills {
+  .head-wrapper {
+    @include mq("md") {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .skillsContainer {
+    @include flex-me($dir: row, $just: space-between, $wrap: wrap);
+    margin: 0 auto;
+
+    @include mq("md") {
+      width: 80%;
+    }
+
+    @include mq("lg") {
+      width: 100%;
+    }
+
+    svg {
+      height: 70px;
+      width: 70px;
+
+      @include mq("md") {
+        height: 120px;
+        width: 120px;
+      }
+    }
+
+    .skill-icon {
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin: 0 5px 8px 5px;
+
+      @include mq("md") {
+        margin: 0 15px 25px 15px;
+      }
+
+      @include mq("lg") {
+        margin: 0 20px 32px 20px;
+      }
+
+      @include mq("xl") {
+        margin: 0 25px 32px 25px;
+      }
+
+      p {
+        text-align: center;
+        margin: 0 auto;
+
+        @include mq("md") {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}

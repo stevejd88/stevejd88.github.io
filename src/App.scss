@@ -1,0 +1,59 @@
+@import "./utilities/utils.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alegreya", Georgia, "Times New Roman", Times, serif;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient($orange-dark, transparent 90%),
+    linear-gradient(0deg, $white, transparent), url("./assets/img/wild-sea.png");
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+#mainContainer {
+  margin-top: 5rem;
+}
+
+#portfolio,
+#about,
+#skills,
+#contact {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include mq("lg") {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  h1 {
+    color: $white;
+    font-size: 44px;
+  }
+}
+
+a {
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.head-wrapper {
+  position: relative;
+  height: 50px;
+}

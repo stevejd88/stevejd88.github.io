@@ -1,0 +1,142 @@
+@import "../../utilities/utils.scss";
+
+#portfolio {
+  margin-bottom: 4rem;
+
+  ul {
+    max-width: 300px;
+    margin: 0 auto;
+    @include flex-me($dir: column, $just: center, $wrap: wrap);
+
+    @include mq("md") {
+      max-width: none;
+      @include flex-me($dir: row, $just: space-between, $wrap: wrap);
+    }
+  }
+
+  img {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom: 1px solid $black;
+    margin-bottom: 0.25rem;
+    min-height: 175px;
+    max-height: 175px;
+    width: 100%;
+    image-rendering: -webkit-optimize-contrast;
+    @include mq("md") {
+      min-height: 200px;
+    }
+  }
+
+  .flip-card {
+    background-color: transparent;
+    border-radius: 0.25rem;
+    height: 320px;
+    perspective: 1000px;
+    margin-bottom: 1.5rem;
+    @include mq("md") {
+      box-sizing: content-box;
+      font-size: 20px;
+      padding: 0.5rem;
+      width: 320px;
+      height: 400px;
+      max-width: 45%;
+    }
+  }
+
+  .flip-card-inner {
+    position: relative;
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    @include flex-me($dir: column, $just: center, $wrap: wrap);
+
+    button {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      background-color: $red;
+      color: $white;
+
+      &:hover {
+        background-color: $black;
+        color: $gold;
+      }
+    }
+  }
+
+  .flip {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: $white;
+    color: $black;
+    border: 1px solid $black;
+  }
+
+  .flip-card-back {
+    font-family: "libre baskerville", Georgia, serif;
+    letter-spacing: 1px;
+    background-color: $black-grey;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 0.5rem;
+    text-align: left;
+    @include flex-me($dir: column, $just: space-between);
+    @include mq("md") {
+      font-size: 19px;
+    }
+
+    p {
+      padding: 2px;
+    }
+  }
+
+  .view {
+    @include flex-me($dir: row, $just: space-between, $wrap: wrap);
+    text-align: center;
+    margin-bottom: 0.5rem;
+
+    a {
+      color: $black;
+      border-radius: 3px;
+      padding: 1px;
+      width: 125px;
+      background-color: $orange;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $red;
+        color: $white;
+      }
+    }
+  }
+
+  .youtube {
+    color: $gold;
+    text-decoration: none;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.head-wrapper {
+  position: relative;
+  height: 50px;
+  margin-bottom: 0.5rem;
+}

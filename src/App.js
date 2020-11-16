@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, Suspense, lazy } from "react";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import Footer from "./components/Footer";
+
+import "./App.scss";
+
+// components
+const MainNav = lazy(() => import("./components/MainNav"));
+const Landing = lazy(() => import("./components/Landing"));
+const About = lazy(() => import("./components/About"));
+const Portfolio = lazy(() => import("./components/Portfolio"));
+const Skills = lazy(() => import("./components/Skills"));
+const Contact = lazy(() => import("./components/Contact"));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Fragment>
+          <MainNav />
+
+          <div id='mainContainer'>
+            <Switch>
+              <Route exact path='/' component={Landing} />
+              <Route path='/about' component={About} />
+              <Route path='/portfolio' component={Portfolio} />
+              <Route path='/skills' component={Skills} />
+              <Route path='/contact' component={Contact} />
+            </Switch>
+          </div>
+
+          <Footer />
+        </Fragment>
+      </Suspense>
+    </Router>
   );
 }
 

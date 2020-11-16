@@ -1,0 +1,42 @@
+@import "../../utilities/utils.scss";
+
+#contact {
+  .contact-head {
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    color: $white;
+
+    @include mq("md") {
+      font-size: 44px;
+    }
+
+    @include mq("lg") {
+      margin-bottom: 3rem;
+    }
+  }
+
+  text-align: center;
+  .social-media {
+    @include flex-me($dir: column, $just: center);
+  }
+
+  a {
+    margin: 0 auto;
+    width: 100px;
+  }
+
+  a:hover > svg * {
+    fill: $red;
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+
+    @include mq("md") {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
