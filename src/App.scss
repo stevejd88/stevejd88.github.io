@@ -1,15 +1,15 @@
-@import "./utilities/utils.scss";
+@import './utilities/utils.scss';
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Alegreya", Georgia, "Times New Roman", Times, serif;
+  font-family: 'Alegreya', Georgia, 'Times New Roman', Times, serif;
   width: 100vw;
   height: 100vh;
   background: linear-gradient($orange-dark, transparent 90%),
-    linear-gradient(0deg, $white, transparent), url("./assets/img/wild-sea.png");
+    linear-gradient(0deg, $white, transparent), url('./assets/img/wild-sea.png');
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
 }
@@ -25,7 +25,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 
-  @include mq("lg") {
+  @include mq('lg') {
     margin: 0 auto;
     width: 80%;
   }

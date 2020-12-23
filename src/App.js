@@ -1,16 +1,16 @@
-import React, { Fragment, Suspense, lazy } from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import Footer from "./components/Footer";
+import React, { Fragment, Suspense, lazy } from 'react';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import Footer from './components/Footer';
 
-import "./App.scss";
+import './App.scss';
 
 // components
-const MainNav = lazy(() => import("./components/MainNav"));
-const Landing = lazy(() => import("./components/Landing"));
-const About = lazy(() => import("./components/About"));
-const Portfolio = lazy(() => import("./components/Portfolio"));
-const Skills = lazy(() => import("./components/Skills"));
-const Contact = lazy(() => import("./components/Contact"));
+const MainNav = lazy(() => import('./components/MainNav'));
+const Landing = lazy(() => import('./components/Landing'));
+const About = lazy(() => import('./components/About'));
+const Portfolio = lazy(() => import('./components/Portfolio'));
+const Skills = lazy(() => import('./components/Skills'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function App() {
   return (
@@ -28,8 +28,6 @@ function App() {
               <Route path='/contact' component={Contact} />
             </Switch>
           </div>
-
-          <Footer />
         </Fragment>
       </Suspense>
     </Router>
