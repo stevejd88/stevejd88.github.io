@@ -3,12 +3,26 @@ import Matchup313 from '../assets/img/sw-326.png';
 import Employee from '../assets/img/employee-313.png';
 import Housing from '../assets/img/housing-335.png';
 import Dashboard from '../assets/img/dashboard-478.png';
-import Gameshow from '../assets/img/game-736.png';
-import Gallery from '../assets/img/gallery-349.png';
 import Style from '../assets/img/style-332.png';
 import Guessy from '../assets/img/guessy.png';
+import Crown from '../assets/img/crwn.png';
 
 const SiteList = [
+  {
+    siteName: 'E-Commerce Store',
+    sum:
+      'A mock E-commerce store built with React and Redux. Auth and data storage are handled by a Firebase database. Payments handled Stripe Payments.',
+    skills: [
+      'React,',
+      'Redux,',
+      'Firebase,',
+      'Stripe Payment,',
+      'Styled Components'
+    ],
+    img: Crown,
+    site: 'https://crwn-atx.herokuapp.com/',
+    gitHub: 'https://github.com/stevejd88/crwn-clothing'
+  },
   {
     siteName: 'Guessy',
     sum:
@@ -66,24 +80,6 @@ const SiteList = [
     img: Dashboard,
     site: 'https://stevejd88.github.io/techdegree-project-7/',
     gitHub: 'https://github.com/stevejd88/techdegree-project-7'
-  },
-  {
-    siteName: 'Game Show App',
-    sum:
-      'A a browser friendly word guessing game created using vanilla JavaScript that populates a random phrase. Then, redesigned the game using CSS transitions. This was a project from my online bootcamp program',
-    skills: ['JavaScript,', 'HTML,', 'CSS'],
-    img: Gameshow,
-    site: 'https://stevejd88.github.io/techdegree-project-6/',
-    gitHub: 'https://github.com/stevejd88/techdegree-project-6'
-  },
-  {
-    siteName: 'Photo Gallery',
-    sum:
-      'An interactive photo gallery with a popup lightbox using the magnific Pop-Up plugin for jQuery. Also includes a functional search bar using jQuery to filter through pictures. This was a project from my online bootcamp program',
-    skills: ['JavaScript,', 'jQuery,', 'Sass,', 'HTML,', 'CSS'],
-    img: Gallery,
-    site: 'https://stevejd88.github.io/techdegree-project-5/',
-    gitHub: 'https://github.com/stevejd88/techdegree-project-5'
   },
   {
     siteName: 'Web Style Guide',

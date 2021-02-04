@@ -1,6 +1,5 @@
 import React, { Fragment, Suspense, lazy } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import Footer from './components/Footer';
 
 import './App.scss';
 

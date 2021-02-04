@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from 'react';
 
-import HtmlSvg from "./svg/HtmlSvg";
-import CssSvg from "./svg/CssSvg";
+import HtmlSvg from './svg/HtmlSvg';
+import CssSvg from './svg/CssSvg';
 
 class SVG {
   constructor(tech, svg) {
@@ -10,6 +10,6 @@ class SVG {
   }
 }
 
-export const HTML = [new SVG("HTML", <HtmlSvg />)];
+export const HTML = [new SVG('HTML', <HtmlSvg />)];
 
-export const CSS = [new SVG("CSS", <CssSvg />)];
+export const CSS = [new SVG('CSS', <CssSvg />)];
